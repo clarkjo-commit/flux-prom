@@ -1,0 +1,7 @@
+resources:
+  - ../../base/prometheus
+  - ../../base/fluentbit
+
+patchesStrategicMerge:
+  - prometheus-patch.yaml
+  - fluentbit-patch.yaml

@@ -1,0 +1,11 @@
+apiVersion: tanzu.vmware.com/v1alpha1
+kind: PackageInstall
+metadata:
+  name: prometheus
+  namespace: monitoring
+spec:
+  values:
+    - inline:
+        server:
+          service:
+            loadBalancerIP: 10.0.0.100

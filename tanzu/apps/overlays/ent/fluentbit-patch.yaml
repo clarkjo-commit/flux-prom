@@ -1,0 +1,10 @@
+apiVersion: tanzu.vmware.com/v1alpha1
+kind: PackageInstall
+metadata:
+  name: fluentbit
+  namespace: logging
+spec:
+  values:
+    - inline:
+        output:
+          host: logs-dev.example.local

@@ -1,0 +1,15 @@
+apiVersion: tanzu.vmware.com/v1alpha1
+kind: PackageInstall
+metadata:
+  name: prometheus
+  namespace: monitoring
+spec:
+  packageRef:
+    refName: prometheus.community.tanzu.vmware.com
+    version: "*"
+  values:
+    - inline:
+        server:
+          service:
+            type: LoadBalancer
+            # loadBalancerIP will be patched per-env

@@ -1,0 +1,9 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: GitRepository
+metadata:
+  name: flux-repo
+  namespace: flux-system
+spec:
+  interval: 1m0s          # how often to check for new commits
+  url: https://github.com/<owner>/<repo>.git    # replace with your repo URL
+  branch: <branch>        # e.g. main or master

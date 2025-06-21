@@ -1,0 +1,2 @@
+resources:
+  - fluentbit-packageinstall.yaml

@@ -1,0 +1,14 @@
+apiVersion: tanzu.vmware.com/v1alpha1
+kind: PackageInstall
+metadata:
+  name: fluentbit
+  namespace: logging
+spec:
+  packageRef:
+    refName: fluentbit.logging.tanzu.vmware.com
+    version: "*"
+  values:
+    - inline:
+        output:
+          host: OUTPUT_HOST_PLACEHOLDER
+          port: 24224
